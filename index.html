@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>u know who made this</title>
+    <link rel="icon" href="https://i.ibb.co.com/bjmxwPpf/images-3-7.jpg">
+</head>
+
+<body>
+    <div class="background-decor">
+        <img src="kucing.gif" class="flower" style="left: 20%; top: 95%; animation-delay: 5s; width: 130px;">
+        <img src="kucing.gif" class="flower" style="left: 60%; top: 65%; animation-delay: 5s; width: 130px;">
+        <img src="kucing.gif" class="flower" style="right: 20%; top: 35%; animation-delay: 5s; width: 130px;">
+        <img src="kucing.gif" class="flower" style="right: 60%; top: 5%; animation-delay: 5s; width: 130px;">
+        <img src="kupu.png" class="butterfly" style="left: 30%; top: 80%; width: 100px; animation-delay: 1s;">
+        <img src="kupu.png" class="butterfly" style="left: 80%; top: 90%; width: 80px; animation-delay: 5s;">
+    </div>
+
+    <div class="container">
+        <!-- Popup page -->
+        <div id="popup" class="active">
+            <h2 id="popupText">semoga km sukaaa yaa <3</h2>
+            <button onclick="nextPopup()">tap !</button>
+        </div>
+
+        <!-- Question page -->
+        <div id="questionPage">
+            <h2><b></b>mau liat orang gengsi setinggi monas ga ? </h2>
+            <div>
+        <button onclick="goToGallery()">mauu</button>
+
+        <button id="noBtn" onclick="moveNoBtn()">gamauu</button>
+            </div>
+        </div>
+
+        <!-- Gallery page -->
+        <div id="galleryPage">
+            <!-- Audio with autoplay and muted -->
+            <audio id="audio" autoplay muted loop>
+                <source src="lagu.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <h2><b>ini dia orangnyaaa 😹💖</b></h2>
+            <div class="gallery">
+                <!-- Gambar-gambar foto -->
+                <img src="foto/1.jpg" alt="Foto kamu">
+                <img src="foto/2.jpg" alt="Foto kamu">
+                <img src="foto/3.jpg" alt="Foto kamu">
+                <img src="foto/4.jpg" alt="Foto kamu">
+                <img src="foto/5.jpg" alt="Foto kamu">
+                <img src="foto/6.jpg" alt="Foto kamu">
+                <img src="foto/7.jpg" alt="Foto kamu">
+                <img src="foto/8.jpg" alt="Foto kamu">
+                <img src="foto/9.jpg" alt="Foto kamu">
+                <img src="foto/10.jpg" alt="Foto kamu">
+                <img src="foto/11.jpg" alt="Foto kamu">
+                <img src="foto/12.jpg" alt="Foto kamu">
+                <img src="foto/13.jpg" alt="Foto kamu">
+                <img src="foto/14.jpg" alt="Foto kamu">
+                <img src="foto/15.jpg" alt="Foto kamu">
+                <img src="foto/16.jpg" alt="Foto kamu">
+                <img src="foto/17.jpg" alt="Foto kamu">
+                <img src="foto/1.jpg" alt="Foto kamu">
+                <img src="foto/2.jpg" alt="Foto kamu">
+                <img src="foto/3.jpg" alt="Foto kamu">
+                <img src="foto/4.jpg" alt="Foto kamu">
+                <img src="foto/5.jpg" alt="Foto kamu">
+                <img src="foto/6.jpg" alt="Foto kamu">
+                <img src="foto/7.jpg" alt="Foto kamu">
+            </div>
+        </div>
+    </div>
+
+    <!-- Menyertakan file JavaScript -->
+    <script src="script.js"></script>
+
+    <script>
+        // Fungsi untuk memulai audio setelah interaksi pengguna (untuk perangkat mobile)
+        document.addEventListener("click", function () {
+            var audio = document.getElementById('audio');
+            audio.muted = false; // Matikan mute untuk memulai suara setelah klik
+            audio.play();        // Memulai audio
+        });
+    </script>
+</body>
+
+</html>
